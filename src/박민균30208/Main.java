@@ -56,14 +56,17 @@ public class Main {
 		System.out.println("");
 		System.out.println("----- 도서 목록 -----");
 		BufferedReader br = new BufferedReader(new FileReader(filePath));
+		int i=0;
 		int count = 1;
 		String str = "";
 		try {
 			while ((str = br.readLine()) != null) {
 				System.out.println(count + ") " + str);
 				count++;
+				i++;
 			}
 			System.out.println("");
+			System.out.println(i+ "개의 데이터가 출력되었습니다.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
